@@ -1,0 +1,506 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.top {
+  width: 100%;
+  background-color: #333333;
+}
+
+.topCab {
+  width: 1226px;
+  height: 40px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topCab ul {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topCab ul li {
+  height: 100%;
+  color: #b0b0b0;
+  font-size: 12px;
+  padding: 0 10px;
+  border-right: #433d37 solid 1px;
+}
+
+.topCab ul li a {
+  color: #b0b0b0;
+  text-decoration: none;
+}
+
+.topCab ul li a:hover {
+  color: #ffffff;
+}
+
+.topCab-r ul li:nth-child(4) {
+  background-color: #424242;
+
+}
+
+.topCab-r {
+  height: 100%;
+}
+
+.topCab-r ul {
+  height: 100%;
+}
+
+.topCab-r ul li {
+  display: flex;
+  align-items: center;
+}
+
+.headerCab {
+  width: 1226px;
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  transition: all 0.5s;
+  /* background-color: pink; */
+}
+
+.headerCab-l {
+  width: 80%;
+  height: 56px;
+  /* background-color: #ff6700; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tab {
+  width: 80%;
+
+}
+
+.tab ul {
+  width: 100%;
+  /* height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; */
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 10px;
+  /* background-color: #ff6700; */
+}
+
+.tab ul li {
+  /* width: 100%; */
+  height: 100%;
+  /* flex-wrap: nowrap; */
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.tab ul li:nth-child(2) {
+  margin-right: 24px;
+  margin-left: 10px;
+}
+
+.tab ul li a {
+  text-decoration: none;
+  color: #333333;
+  text-wrap: nowrap;
+}
+
+.tab ul li a:hover {
+  color: #ff6700;
+}
+
+.headerCab-r {
+  width: 20%;
+  height: 56px;
+  /* background-color: #ff6700; */
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+input[type="search"] {
+  width: 75%;
+  height: 80%;
+  border: 1px solid #e0e0e0;
+  border-radius: 2px;
+  padding-left: 10px;
+  outline: none;
+}
+
+.search {
+  width: 25%;
+  height: 79%;
+  border: 1px solid #e0e0e0;
+  border-radius: 2px;
+  background-color: #fff;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.search:hover {
+  background-color: #ff6700;
+}
+
+.banner {
+  width: 1226px;
+  height: 460px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  background-color: pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-l {
+  width: 20%;
+  height: 100%;
+  background-color: #3f3d3d;
+  position: relative;
+}
+
+.banner-r {
+  width: 80%;
+  height: 100%;
+  /* background-color: pink; */
+}
+
+.banner-l-tab {
+  width: 100%;
+  height: 100%;
+}
+
+.banner-l ul {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner-l .banner-l-tab>ul li {
+  width: 100%;
+  height: 10%;
+  color: #ffffff;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding-left: 20px; */
+
+}
+
+.banner-l ul li a {
+  padding-left: 10%;
+}
+
+.banner-l ul li span {
+  padding-right: 10%;
+}
+
+.banner-l .banner-l-tab>ul li:hover {
+  background-color: #ff6700;
+}
+
+.banner-l ul li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.banner-l ul li a:hover {
+  color: #ffffff;
+}
+
+.banner-r {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url(../image/banner.jpg) no-repeat 100px center;
+  background-size: cover;
+  background-position: -210px;
+  background-repeat: no-repeat;
+  transition: all 0.6s;
+}
+
+.container {
+  position: absolute;
+  /* width: 800px; */
+  /* 保持实际需要尺寸 */
+  height: 460px;
+  left: 245px;
+  top: 0;
+  background: white;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  /* 使用透明度控制 */
+  visibility: hidden;
+  /* 确保不可交互 */
+  transition: all 0.3s;
+  z-index: 1000;
+  overflow: hidden;
+  /* 关键修复 */
+}
+
+/* 删除原有hover样式 */
+.container.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.container ul {
+  width: 100%;
+  height: 460px;
+  /* 固定容器高度 */
+  display: grid;
+  /* 核心修正：列方向布局 */
+  grid-template-rows: repeat(4, 1fr);
+  /* 每列4行 */
+  grid-auto-flow: column;
+  /* 按列填充 */
+  grid-auto-columns: minmax(200px, 1fr);
+  /* 自动列宽 */
+  gap: 10px;
+  padding: 0 20px;
+  list-style: none;
+  align-content: start;
+  /* 顶部对齐 */
+}
+
+.container ul li {
+  height: calc((460px - (3 * 10px)) / 4);
+  /* 精确计算每项高度 */
+  /* 保持原有其他样式 */
+  display: flex;
+  align-items: center;
+  /* padding: 0 20px; */
+  transition: all 0.3s;
+  border-radius: 4px;
+
+}
+
+
+
+/* 图片与文字横向排列方案 */
+.container ul li img {
+  width: 80px;
+  /* 固定图片宽度 */
+  height: 80px;
+  /* 固定图片高度 */
+  object-fit: cover;
+  /* 保持图片比例 */
+  margin-right: 15px;
+  /* 图片文字间距 */
+  border-radius: 4px;
+  /* 图片圆角 */
+}
+
+.container ul li span {
+  font-size: 12px;
+  color: #333;
+  flex: 1;
+  text-wrap: nowrap;
+  /* 文字区域占据剩余空间 */
+}
+
+/* 悬停效果增强 */
+.container ul li:hover {
+  /* background: #e0e0e0; */
+  transform: translateX(5px);
+}
+
+
+
+.container ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+
+
+.products {
+  width: 1226px;
+  height: 150px;
+  margin: 0 auto;
+  /* display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1%; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1%;
+}
+
+.products div:nth-child(1) {
+  width: 246px;
+  height: 100%;
+  background-color: pink;
+}
+
+.products div {
+  width: 26%;
+  height: 100%;
+  background-color: pink;
+}
+
+.service ul {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  cursor: pointer;
+
+}
+
+.service ul li {
+  /* width: 24%;
+  height: 50%; */
+  height: 100%;
+  width: 100%;
+  background-color: #5f5750;
+  border: #665e57 solid 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* top: 10; */
+}
+
+.service ul li span {
+  position: absolute;
+  top: 45%;
+  color: #c0bebb;
+}
+
+/* 合并后的 CSS 样式 */
+.currentTabgoods {
+  width: 100%;
+  height: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  z-index: 999;
+  overflow: hidden;
+  transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+.currentTabgoods.active {
+  height: 220px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
+  /* 改为固定高度更可靠 */
+}
+
+.currentTabgoods ul {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  padding: 20px;
+  height: 10%;
+}
+
+.currentTabgoods li {
+  transition: transform 0.2s;
+  border-right: 1px solid #eee;
+}
+
+/* .currentTabgoods li:hover {
+  transform: translateY(-5px);
+} */
+
+.currentTabgoods ul li a {
+  width: 80%;
+  height: 80%;
+  padding-right: 10%;
+  border-right: 1px solid #e0e0e0;
+  text-decoration: none;
+}
+
+.currentTabgoods img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+}
+
+a div:nth-child(2) {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  /* color: #fff; */
+}
+
+/* /* 添加以下样式 */
+.name,
+.price {
+  display: block;
+  /* 确保元素可见 */
+  color: #333;
+  /* 文字颜色 */
+  font-size: 14px;
+  /* 字号 */
+  padding: 0px 010px;
+  /* 内边距 */
+}
+
+.price {
+  color: black;
+  /* background-color: black; */
+  /* 小米品牌色 */
+  font-weight: bold;
+}
+
+.products div img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  cursor: pointer;
+}
+
+.banner-r img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  cursor: pointer;
+}
+
+.next {
+  z-index: 999;
+  cursor: pointer;
+}
+
+.backwards {
+  z-index: 999;
+  cursor: pointer;
+}
